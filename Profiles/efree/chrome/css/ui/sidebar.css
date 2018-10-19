@@ -82,68 +82,75 @@
 */
 
 /*侧边栏调整*/
-.sidebar-header, #sidebar-header {
+.sidebar-header,
+#sidebar-header {
     font-size: 12px !important;
     font-weight: bold !important;
-    padding: 2px 4px!important;
-	background-color: #e4e4e4 !important;
-	width:100% !important;
+    padding: 2px 4px !important;
+    background-color: #e4e4e4 !important;
+    width: 100% !important;
 }
-#sidebar-search-container{
-   margin-left: 5px !important;
-   margin-right: 5px !important;
+
+#sidebar-search-container {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }
-#bookmarks-view-children{
-  --treechildren-outline: none;
-  --treechildren-2ndBorderColor: transparent !important;
-  --treechildren-selectedColor: transparent !important;
-  --treechildren-focusColor: transparent !important;
-  --treechildren-selectedFocusColor: transparent !important;
-  --treechildren-currentColor: transparent !important;
-  --treechildren-hoverColor: transparent !important;
-  --treechildren-selectedBorder: transparent !important;
-  --treechildren-selectedBottomBorder: transparent !important;
-  --treechildren-selectedImage: none !important;
-  --treechildren-selectedBackground: transparent !important;
-  --treechildren-currentFocusBorder: transparent !important;
-  --treechildren-currentFocusBottomBorder: transparent !important;
-  --treechildren-selectedFocusBorder: transparent !important;
-  --treechildren-selectedFocusBottomBorder: transparent !important;
-  --treechildren-selectedFocusImage: none !important;
-  --treechildren-selectedFocusBackground: #D3D3D3 !important;
-  --treechildren-selectedFocusCurrentBorder: transparent !important;
-  --treechildren-selectedFocusCurrentBottomBorder: transparent !important;
-  --treechildren-selectedFocusCurrentImage: none !important;
-  --treechildren-hoverBorder: transparent !important;
-  --treechildren-hoverBottomBorder: transparent !important;
-  --treechildren-hoverImage: transparent !important;
-  --treechildren-hoverCurrentBorder: transparent !important;
-  --treechildren-hoverCurrentBottomBorder: transparent !important;
-  --treechildren-hoverCurrentImage: transparent !important;
-  --treechildren-hoverSelectedBorder: transparent !important;
-  --treechildren-hoverSelectedBottomBorder: transparent !important;
-  --treechildren-hoverSelectedImage: transparent !important;
+
+#bookmarks-view-children {
+    --treechildren-outline: none;
+    --treechildren-2ndBorderColor: transparent !important;
+    --treechildren-selectedColor: transparent !important;
+    --treechildren-focusColor: transparent !important;
+    --treechildren-selectedFocusColor: transparent !important;
+    --treechildren-currentColor: transparent !important;
+    --treechildren-hoverColor: transparent !important;
+    --treechildren-selectedBorder: transparent !important;
+    --treechildren-selectedBottomBorder: transparent !important;
+    --treechildren-selectedImage: none !important;
+    --treechildren-selectedBackground: transparent !important;
+    --treechildren-currentFocusBorder: transparent !important;
+    --treechildren-currentFocusBottomBorder: transparent !important;
+    --treechildren-selectedFocusBorder: transparent !important;
+    --treechildren-selectedFocusBottomBorder: transparent !important;
+    --treechildren-selectedFocusImage: none !important;
+    --treechildren-selectedFocusBackground: #D3D3D3 !important;
+    --treechildren-selectedFocusCurrentBorder: transparent !important;
+    --treechildren-selectedFocusCurrentBottomBorder: transparent !important;
+    --treechildren-selectedFocusCurrentImage: none !important;
+    --treechildren-hoverBorder: transparent !important;
+    --treechildren-hoverBottomBorder: transparent !important;
+    --treechildren-hoverImage: transparent !important;
+    --treechildren-hoverCurrentBorder: transparent !important;
+    --treechildren-hoverCurrentBottomBorder: transparent !important;
+    --treechildren-hoverCurrentImage: transparent !important;
+    --treechildren-hoverSelectedBorder: transparent !important;
+    --treechildren-hoverSelectedBottomBorder: transparent !important;
+    --treechildren-hoverSelectedImage: transparent !important;
 }
+
 #sidebar-switcher-target {
- padding: 2px !important;
- margin: 0 !important;
+    padding: 2px !important;
+    margin: 0 !important;
 }
-#sidebar-close, /* 隐藏关闭侧边栏按钮 */
+
+#sidebar-close,/* 隐藏关闭侧边栏按钮 */
 /*#sidebar-icon,*/
 #sidebar-header .dropmarker-icon,
 #sidebar-switcher-arrow {
-  display: none !important;
+    display: none !important;
 }
-#sidebar-title{
-  min-width:30px !important;
-  padding: 0  2px !important;
-  margin: 0 !important;
-  padding-inline-start: 0px;
-  padding-inline-end: 0px;
+
+#sidebar-title {
+    min-width: 30px !important;
+    padding: 0 2px !important;
+    margin: 0 !important;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
 }
+
 /* 调整关闭侧边栏按钮位置 */
-#sidebar-checkbox {  
-  padding: 0 !important;
-  margin: 0 0 0 4px !important;
-  -moz-box-ordinal-group:10 !important;
+#sidebar-checkbox {
+    padding: 0 !important;
+    margin: 0 0 0 4px !important;
+    -moz-box-ordinal-group: 10 !important;
 }

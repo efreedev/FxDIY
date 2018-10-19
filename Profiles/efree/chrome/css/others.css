@@ -1,5 +1,5 @@
 /*隐藏新标签页左上角导览按钮*/
-#onboarding-overlay-button {display:none !important;}
+#onboarding-overlay-button {display: none !important;}
 
 /*选中文字及背景色*/
 *::-moz-selection {
@@ -7,16 +7,11 @@
 	background: #D2691E !important;
 	/* 高亮内容中的文本颜色 */
 	color: white !important;
-} 
+}
 
 /*去干扰码*/
-FONT.jammer {
-	display: none !important;
-}
-
-SPAN.fw {
-	display: none !important;
-}
+FONT.jammer {display: none !important;}
+SPAN.fw {display: none !important;}
 
 /* 阻止<blink>标签带来的闪烁 */
 blink, .blink, *[style*="blink"] {
@@ -24,8 +19,13 @@ blink, .blink, *[style*="blink"] {
 }
 
 /* 显示缺失图片占位符 */
-@-moz-document url-prefix(http), url-prefix(https), url-prefix(file) {
-	img {font: 12px Arial!important;	}
+@-moz-document url-prefix(http),
+url-prefix(https),
+url-prefix(file) {
+	img {
+		font: 12px Arial !important;
+	}
+
 	img:-moz-broken {
 		-moz-force-broken-image-icon: 1 !important;
 		background-repeat: no-repeat;
@@ -37,7 +37,7 @@ blink, .blink, *[style*="blink"] {
 
 /* 图片经过外发光 */
 img:hover {
-	box-shadow: 0px 0px 4px 4px rgba(130,190,10,0.6) !important;
+	box-shadow: 0px 0px 4px 4px rgba(130, 190, 10, 0.6) !important;
 	-moz-transition-property: box-shadow;
 	-moz-transition-duration: .31s;
 }
@@ -48,27 +48,41 @@ img {
 }
 
 /*超链接去下划线*/
-em,a,u,#rcnt a:hover,#brs a:hover,#nycp a:hover{text-decoration: none!important;}
+em,
+a,
+u,
+#rcnt a:hover,
+#brs a:hover,
+#nycp a:hover {
+	text-decoration: none !important;
+}
 
 /*新窗口链接白字蓝光，当前窗口链接白字红光*/
-@-moz-document regexp("^((?!about:addons).)*$")  {
-    A[href][target="_blank"]:hover {
-		transition:color 0.423s ease,text-shadow 0.423s ease;
-		color:rgba(255,255,255,1)!important;
-		text-shadow:0 1px rgba(64,64,255,0.9),0 1px 1px rgba(64,64,255,0.9),0 -1px 1px rgba(64,64,255,0.9), 1px 0 1px rgba(64,64,255,0.9),-1px 0 1px rgba(64,64,255,0.9),0 0 3px rgba(64,64,255,0.9)!important;
+@-moz-document regexp("^((?!about:addons).)*$") {
+	A[href][target="_blank"]:hover {
+		transition: color 0.423s ease, text-shadow 0.423s ease;
+		color: rgba(255, 255, 255, 1) !important;
+		text-shadow: 0 1px rgba(64, 64, 255, 0.9), 0 1px 1px rgba(64, 64, 255, 0.9), 0 -1px 1px rgba(64, 64, 255, 0.9), 1px 0 1px rgba(64, 64, 255, 0.9), -1px 0 1px rgba(64, 64, 255, 0.9), 0 0 3px rgba(64, 64, 255, 0.9) !important;
 	}
-	A[href]:hover,button[type="submit"]:hover *,label:hover {
-		transition:color 0.423s ease,text-shadow 0.423s ease;color:rgba(255,255,255,1)!important;
-		text-shadow:0 1px rgba(255,64,64,0.9),0 1px 1px rgba(255,64,64,0.9),0 -1px 1px rgba(255,64,64,0.9), 1px 0 1px rgba(255,64,64,0.9),-1px 0 1px rgba(255,64,64,0.9),0 0 3px rgba(255,64,64,0.9)!important;
+
+	A[href]:hover,
+	button[type="submit"]:hover *,
+	label:hover {
+		transition: color 0.423s ease, text-shadow 0.423s ease;
+		color: rgba(255, 255, 255, 1) !important;
+		text-shadow: 0 1px rgba(255, 64, 64, 0.9), 0 1px 1px rgba(255, 64, 64, 0.9), 0 -1px 1px rgba(255, 64, 64, 0.9), 1px 0 1px rgba(255, 64, 64, 0.9), -1px 0 1px rgba(255, 64, 64, 0.9), 0 0 3px rgba(255, 64, 64, 0.9) !important;
 	}
 }
 
 /* 阅读过的链接变色 */
-a:visited, .fl:visited { color: #afaf7d !important }
+a:visited,
+.fl:visited {
+	color: #afaf7d !important
+}
 
 /*图片经过外发光*/
 img:hover {
-	box-shadow: 0px 0px 4px 4px rgba(130,190,10,0.6) !important;
+	box-shadow: 0px 0px 4px 4px rgba(130, 190, 10, 0.6) !important;
 	-moz-transition-property: box-shadow;
 	-moz-transition-duration: .31s;
 }
@@ -79,15 +93,21 @@ img {
 }
 
 /*文本输入框高亮*/
-@-moz-document url-prefix(http), url-prefix(file) {
-	textarea:focus,select:focus,input:focus {
+@-moz-document url-prefix(http),
+url-prefix(file) {
+
+	textarea:focus,
+	select:focus,
+	input:focus {
 		border: 2px #4D90FE solid;
-		border-color: #4D90FE!important;
-		box-shadow: 0 0 4px 1px #4D90FE!important;
-		border-radius:2.5px!important;
+		border-color: #4D90FE !important;
+		box-shadow: 0 0 4px 1px #4D90FE !important;
+		border-radius: 2.5px !important;
 	}
 
-	textarea:focus,select:focus,input:focus{
+	textarea:focus,
+	select:focus,
+	input:focus {
 		outline-offset: -1px !important;
 	}
 }

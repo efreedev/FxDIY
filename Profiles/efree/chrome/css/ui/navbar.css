@@ -1,125 +1,185 @@
 @namespace html url("http://www.w3.org/1999/xhtml");
 
 * {
-    -moz-outline-radius: 0px !important;
-    border-radius: 0px !important;
+  -moz-outline-radius: 0px !important;
+  border-radius: 0px !important;
 }
 
 /*导航栏高度*/
-#nav-bar > *{ 
- margin:-1px 0px -1px 2px !important;/* 修正Firefox 58+的显示*/
+#nav-bar>* {
+  margin: -1px 0px -1px 2px !important;
+  /* 修正Firefox 58+的显示*/
 }
-#nav-bar { 
-    box-shadow:0 1px 3px 0 rgba(0, 0, 0, .2);
+
+#nav-bar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
 }
+
 /*边框*/
 #nav-bar toolbarbutton[type="menu-button"] .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button[open] + .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
-#nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
-#nav-bar .toolbarbutton-1:not([checked]):not([open]):not(:active) > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1:not([checked]):not([open]):not(:active) > .toolbarbutton-text,
-#nav-bar .toolbarbutton-1:not([checked]):not([open]):not(:active) > .toolbarbutton-badge-stack,
-#nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active) > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {    
-  box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
-			  0 0 0 2px rgba(255,255,255,.1) inset,
-			  0 0 0 1px rgba(0,0,0,.3) inset !important;
-			  border-radius:0px !important;
-			  margin-left: -5px !important;
+#nav-bar .toolbarbutton-1>.toolbarbutton-menubutton-button[open]+.toolbarbutton-menubutton-dropmarker>.dropmarker-icon,
+#nav-bar .toolbarbutton-1[open]>.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1[open]>.toolbarbutton-menubutton-dropmarker>.dropmarker-icon,
+#nav-bar .toolbarbutton-1:not([checked]):not([open]):not(:active)>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([checked]):not([open]):not(:active)>.toolbarbutton-text,
+#nav-bar .toolbarbutton-1:not([checked]):not([open]):not(:active)>.toolbarbutton-badge-stack,
+#nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active)>.toolbarbutton-menubutton-dropmarker:not([disabled])>.dropmarker-icon {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .3) inset,
+    0 0 0 2px rgba(255, 255, 255, .1) inset,
+    0 0 0 1px rgba(0, 0, 0, .3) inset !important;
+  border-radius: 0px !important;
+  margin-left: -5px !important;
 }
-#nav-bar .toolbarbutton-1:not([disabled=true]) > .toolbarbutton-menubutton-button[open] + .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-text,
-#nav-bar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-stack,
-#nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {    
-  box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
-			  0 0 0 1.5px rgba(255,255,255,.1) inset,
-			  0 0 3.5px hsl(190,90%,80%),
-			  0 0 0 1px rgba(0,0,0,.3) inset !important;  
-			  border-radius:0px !important;
-			  margin-left: -5px !important;
+
+#nav-bar .toolbarbutton-1:not([disabled=true])>.toolbarbutton-menubutton-button[open]+.toolbarbutton-menubutton-dropmarker>.dropmarker-icon,
+#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any(:hover, [open])>.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any(:hover, [open])>.toolbarbutton-menubutton-dropmarker>.dropmarker-icon,
+#nav-bar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-text,
+#nav-bar .toolbarbutton-1:not([disabled=true]):not([checked]):not([open]):not(:active):hover>.toolbarbutton-badge-stack,
+#nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover>.toolbarbutton-menubutton-dropmarker:not([disabled])>.dropmarker-icon {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .3) inset,
+    0 0 0 1.5px rgba(255, 255, 255, .1) inset,
+    0 0 3.5px hsl(190, 90%, 80%),
+    0 0 0 1px rgba(0, 0, 0, .3) inset !important;
+  border-radius: 0px !important;
+  margin-left: -5px !important;
 }
+
 #nav-bar toolbarbutton[type="menu"][open]:not([disabled]) .toolbarbutton-icon,
 #nav-bar toolbarbutton[type="menu-button"]:not([open]):hover:not([disabled]):active .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled=true]):-moz-any(:hover:active,:active, [open]) > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled=true]) > .dropmarker-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any([open],[checked],:hover:active,:active) > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any([open],[checked],:hover:active,:active) > .toolbarbutton-text,
-#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any([open],[checked],:hover:active,:active) > .toolbarbutton-badge-stack {   
-  box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
-			  0 0 0 2px rgba(255,255,255,.1) inset,
-			  0 0 0 1px rgba(0,0,0,.3) inset !important;
-			  border-radius:0px !important;
-			  margin-left: -5px !important;
+#nav-bar .toolbarbutton-1>.toolbarbutton-menubutton-button:not([disabled=true]):-moz-any(:hover:active, :active, [open])>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1[open]>.toolbarbutton-menubutton-dropmarker:not([disabled=true])>.dropmarker-icon,
+#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any([open], [checked], :hover:active, :active)>.toolbarbutton-icon,
+#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any([open], [checked], :hover:active, :active)>.toolbarbutton-text,
+#nav-bar .toolbarbutton-1:not([disabled=true]):-moz-any([open], [checked], :hover:active, :active)>.toolbarbutton-badge-stack {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .3) inset,
+    0 0 0 2px rgba(255, 255, 255, .1) inset,
+    0 0 0 1px rgba(0, 0, 0, .3) inset !important;
+  border-radius: 0px !important;
+  margin-left: -5px !important;
 }
+
 /*
 #nav-bar toolbarbutton[disabled=true] > .toolbarbutton-icon {
   opacity: .6 !important;
 }
 */
 /*去除前进后退按钮圆圈*/
-#nav-bar #back-button > .toolbarbutton-icon,
-#nav-bar #forward-button > .toolbarbutton-icon{
-    -moz-appearance: none !important;
-    border: 0px solid transparent !important;
-    box-shadow: none !important;
-    background: none !important;
+#nav-bar #back-button>.toolbarbutton-icon,
+#nav-bar #forward-button>.toolbarbutton-icon {
+  -moz-appearance: none !important;
+  border: 0px solid transparent !important;
+  box-shadow: none !important;
+  background: none !important;
 }
+
 /*前进后退按钮调整*/
-#back-button,#forward-button {
-    -moz-appearance: none !important;
-}
+#back-button,
 #forward-button {
-    -moz-appearance: none !important;
+  -moz-appearance: none !important;
 }
+
+#forward-button {
+  -moz-appearance: none !important;
+}
+
 #forward-button[disabled="true"] {
-    display: none !important;
+  display: none !important;
 }
+
 #back-button[disabled="true"]:hover {
-    background:none !important;
+  background: none !important;
 }
 
 /*前进后退按钮固定大小*/
-#nav-bar #back-button > .toolbarbutton-icon,#nav-bar #forward-button > .toolbarbutton-icon{width:28px !important;height: 28px !important;}
+#nav-bar #back-button>.toolbarbutton-icon,
+#nav-bar #forward-button>.toolbarbutton-icon {
+  width: 28px !important;
+  height: 28px !important;
+}
+
 /*前进后退按钮*/
-#nav-bar #back-button > .toolbarbutton-icon,
-#nav-bar #forward-button > .toolbarbutton-icon{padding:6px 5px !important;border:1px solid #B3B3B3 !important;border-radius:0px !important;}
-#nav-bar #forward-button > .toolbarbutton-icon{margin-left:-5px !important;}
-#nav-bar #back-button > .toolbarbutton-icon{margin-left:-3px !important;margin-right:2px !important;}
-#back-button:active,#forward-button:active{position:fixed !important;margin-left:0px !important;}
-#reload-button:active{position:fixed !important;margin:0px !important;}
+#nav-bar #back-button>.toolbarbutton-icon,
+#nav-bar #forward-button>.toolbarbutton-icon {
+  padding: 6px 5px !important;
+  border: 1px solid #B3B3B3 !important;
+  border-radius: 0px !important;
+}
+
+#nav-bar #forward-button>.toolbarbutton-icon {
+  margin-left: -5px !important;
+}
+
+#nav-bar #back-button>.toolbarbutton-icon {
+  margin-left: -3px !important;
+  margin-right: 2px !important;
+}
+
+#back-button:active,
+#forward-button:active {
+  position: fixed !important;
+  margin-left: 0px !important;
+}
+
+#reload-button:active {
+  position: fixed !important;
+  margin: 0px !important;
+}
+
 /*#stop-button .toolbarbutton-animatable-image,#reload-button .toolbarbutton-animatable-image{width:28px !important;height:28px !important;background-size:28px !important;margin-left:-6px !important;}*/
-#stop-reload-button[animate] > #reload-button .toolbarbutton-animatable-image, #stop-reload-button[animate] > #stop-button .toolbarbutton-animatable-image {background:center !important;}
+#stop-reload-button[animate]>#reload-button .toolbarbutton-animatable-image,
+#stop-reload-button[animate]>#stop-button .toolbarbutton-animatable-image {
+  background: center !important;
+}
+
 /*缩进地址栏和搜索栏间距*/
 /* window #urlbar {margin-right: -2px !important; border-top-right-radius:0!important; border-bottom-right-radius:0!important;} */
 /*导航栏最前最后图标距离调整*/
-#PanelUI-button{margin-left: -7px !important;margin-right: -3px !important;}
-#PanelUI-menu-button{margin-left: 0px !important;margin-right: 0px !important;}
-/*#PanelUI-button,*/#pageActionButton,#pocket-button{display:none !important;}
-#nav-bar #feed-button > .toolbarbutton-icon {    
-    border: 0px solid transparent !important;
-    box-shadow: none !important;
+#PanelUI-button {
+  margin-left: -7px !important;
+  margin-right: -3px !important;
 }
+
+#PanelUI-menu-button {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/*#PanelUI-button,*/
+#pageActionButton,
+#pocket-button {
+  display: none !important;
+}
+
+#nav-bar #feed-button>.toolbarbutton-icon {
+  border: 0px solid transparent !important;
+  box-shadow: none !important;
+}
+
 /*防止图标自动收入折叠按钮*/
-#customizableui-special-spring2{
-    min-width: 3px !important;
-    max-width: 3px !important;
+#customizableui-special-spring2 {
+  min-width: 3px !important;
+  max-width: 3px !important;
 }
-#nav-bar-overflow-button{margin-left: -3px !important;margin-right: 3px !important;}
+
+#nav-bar-overflow-button {
+  margin-left: -3px !important;
+  margin-right: 3px !important;
+}
 
 /* 自动隐藏刷新按钮 */
 #reload-button {
-  transition: 300ms !important; 
-  opacity: 0 !important; 
-  -moz-margin-end: -2.25em !important; 
+  transition: 300ms !important;
+  opacity: 0 !important;
+  -moz-margin-end: -2.25em !important;
 }
+
 #nav-bar:hover #reload-button,
-#stop-reload-button[animate] > #reload-button:not([displaystop]) {
-  transition: 300ms !important; 
-  opacity: 1 !important; 
-  -moz-margin-end: initial !important; 
+#stop-reload-button[animate]>#reload-button:not([displaystop]) {
+  transition: 300ms !important;
+  opacity: 1 !important;
+  -moz-margin-end: initial !important;
 }
 
 /* ublock图标调整 */

@@ -3,25 +3,30 @@
   transform: perspective(1000px) rotateX(-90deg);
   transform-origin: top !important;
   visibility: hidden !important;
-  padding:2px 2px !important;
-  height:auto !important;
+  padding: 2px 2px !important;
+  height: auto !important;
   width: 101% !important;
-  position: fixed !important; 
-  background:-moz-linear-gradient(rgba(102,204,255,.8), rgba(255,255,255,.5)) !important;  /*位置，背景色*/
+  position: fixed !important;
+  background: -moz-linear-gradient(rgba(102, 204, 255, .8), rgba(255, 255, 255, .5)) !important;  /*位置，背景色*/
   opacity: 0;
-  -moz-transition:  .3s ease-out !important;
-  -moz-transition-delay: 0.8s!important;      /*设置多少秒bookmark消失*/
+  -moz-transition: .3s ease-out !important;
+  -moz-transition-delay: 0.8s !important;  /*设置多少秒bookmark消失*/
 }
-#nav-bar:hover ~ #PersonalToolbar,#PersonalToolbar:hover /*地址栏+标签栏为#navigator-toolbox:hover > */
-{
+
+#nav-bar:hover~#PersonalToolbar,
+#PersonalToolbar:hover
+
+/*地址栏+标签栏为#navigator-toolbox:hover > */
+  {
   transform: rotateX(0deg);
   visibility: visible !important;
-  opacity: 1;                               /*动画基于此参数*/
+  opacity: 1;
+  /*动画基于此参数*/
   -moz-transition: .1s ease-in !important;
-  -moz-transition-delay: 0.3s!important;     /*设置多少秒后延迟出现*/
-} 
+  -moz-transition-delay: 0.3s !important;  /*设置多少秒后延迟出现*/
+}
 
-/*书签栏自动隐藏样式<二>*/  
+/*书签栏自动隐藏样式<二>*/
 /*
 #PersonalToolbar {
    width: 100% !important;
@@ -44,13 +49,13 @@
 /*#BMB_bookmarksPopup{
   min-width:220px !important;
 	max-width:220px !important;
-}*/	
+}*/
 
 /*书签项二级菜单宽度*/
-.bookmark-item menuitem { 
-	min-width:190px !important; 
-	max-width:190px !important; 
- }	 
+.bookmark-item menuitem {
+  min-width: 190px !important;
+  max-width: 190px !important;
+}
 
 /* 添加和编辑书签时自动弹出面板 
 #editBookmarkPanel [collapsed="true"],#editBMPanel_descriptionRow,#editBMPanel_locationRow { 
@@ -72,12 +77,14 @@
 */
 
 /*书签工具栏文件夹图标*/
-#PersonalToolbar toolbarbutton[class="bookmark-item"][type="menu"],menu[container="true"][class="menu-iconic bookmark-item"] {
-	list-style-image: url("../image/bookmark-toolbar-folder.svg") !important;
-}	
+#PersonalToolbar toolbarbutton[class="bookmark-item"][type="menu"],
+menu[container="true"][class="menu-iconic bookmark-item"] {
+  list-style-image: url("../image/bookmark-toolbar-folder.svg") !important;
+}
+
 /*书签文件夹图标及网站图标自动补全*/
 menu.bookmark-item:not([query]):not([label="Bookmarks Toolbar"]) {
-	list-style-image: url("../image/bookmark-folder.svg") !important;
+  list-style-image: url("../image/bookmark-folder.svg") !important;
 }
 
 /*自动隐藏文字标签
