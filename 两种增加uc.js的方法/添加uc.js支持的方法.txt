@@ -1,0 +1,18 @@
+首先，在应用目录(即firefox.exe所在目录，简称AppDir)下的default\pref子目录下添加一个用于更改Fx的pref的文件 config-prefs.js，内容如下：
+==- config-prefs.js -==
+pref("general.config.obscure_value", 0);
+pref("general.config.filename", "config.js");
+=== config-prefs.js ===
+
+这样，Fx在启动时会加载AppDir下的config.js，从而实现uc.js支持代码的加载。
+而添加uc.js支持代码的实现方式现在有两种，一种提取自YYK定制版，一种提取自 RunningCheese定制版。
+YYK config.js源代码分析：
+内容比较简单，猜测YYK的实现原理应该是把原始的“uc扩展”的模块放到配置档目录（即配置所在目录，简称ProfileDir)下的子目录chrome\utils下，再用方法进行调用。
+1.利用config.js调用ProfileDir下chrome\utils中的boot.jsm文件。
+2.分析boot.jsm：
+	先注册同一目录下的chrome.manifest，按chrome.manifest内容分析，应该是把所在目录注册为 userchromejs (chrome)，然后调用其余的几个jsm文件(defaultExtPrefs.jsm->globals.jsm->xPref.jsm->userChrome.jsm)实现UC扩展的功能。
+
+RunningCheese的config.js代码分析：
+config.js中直接实现了UC扩展的功能，只是把导出对象 userChrome 的定义剥离到同一目录中的 userChromeJS.js(注意，这个和chrome目录下的userChrome.js是不同的)。
+
+两种方式最后都调用ProfileDir下chrome目录中的UserChrome.js来实现脚本调用功能。其中YYK的v3.0.57mod，而RC的是3.0.48mod。
