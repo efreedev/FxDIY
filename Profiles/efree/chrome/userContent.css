@@ -1,0 +1,9 @@
+/*AGENT_SHEET*/
+/* about:addons */
+@import url(./css/about/addons.css);
+
+/* about:preferences */
+@import url(./css/about/preferences.css);
+
+/*其它*/
+@import url(./css/others.css);

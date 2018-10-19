@@ -1,0 +1,29 @@
+/*AGENT_SHEET*/
+
+/* 菜单 */
+@import url(./css/ui/menu.css);
+
+/*标签栏*/
+@import url(./css/ui/tabbar.css);
+
+/*导航栏*/
+@import url(./css/ui/navbar.css);
+
+/*查找栏*/
+@import url(./css/ui/findbar.css);
+
+/*地址栏*/
+@import url(./css/ui/addrbar.css);
+
+/*书签*/
+@import url(./css/ui/bookmark.css);
+
+/*侧栏*/
+@import url(./css/ui/sidebar.css);
+
+/*多行标签
+@import url(./css/ui/multitab.css); */
+
+/*启用本部分则标签页和按钮移到下方
+#mainPopupSet{-moz-binding: url("data:application/xml,<?xml version='1.0' encoding='UTF-8'?><bindings xmlns='http://www.mozilla.org/xbl'><binding id='userChrome' bindToUntrustedContent='true'><implementation><constructor><![CDATA['use strict';'chrome://browser/content/browser.xul'==location&&(()=>{let a=Components.interfaces,b=Services.dirsvc,c=Services.io.getProtocolHandler('file').QueryInterface(Components.interfaces.nsIFileProtocolHandler).getURLSpecFromFile,d=h=>{setTimeout(()=>{Services.scriptloader.loadSubScript(c(h),null,'UTF-8')})},f=Services.dirsvc.get('UChrm',a.nsIFile);f.append('SubScript');for(let g=f.directoryEntries.QueryInterface(a.nsISimpleEnumerator);g.hasMoreElements();)d(g.getNext().QueryInterface(a.nsIFile))})();]]></constructor></implementation></binding></bindings>")!important;}
+*/
