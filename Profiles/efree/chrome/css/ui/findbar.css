@@ -1,0 +1,12 @@
+/*查找栏左上角版*/
+.browserContainer > findbar,#viewSource #FindToolbar {
+	-moz-box-ordinal-group:0 !important;
+	position:fixed !important;
+	left:0px !important;
+	background:#FAFAFA !important;
+	margin-top:0px !important;
+	border-bottom:1px solid #DDDDDD !important;
+	border-right:1px solid #DDDDDD !important;
+	border-bottom-right-radius:2px !important;
+}
+.findbar-textbox{height:26px !important;}

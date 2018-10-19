@@ -1,0 +1,149 @@
+/*****浮动侧栏自动隐藏样式*****/
+/*
+:root { --sidebar-hover-width: 10px; --sidebar-visible-width: 320px;}
+#sidebar-box { 
+    position: relative !important; 
+    overflow: hidden !important; 
+    margin-right: calc(var(--sidebar-hover-width) * -1) !important; 
+    left: var(--sidebar-hover-width) !important; 
+    min-width: var(--sidebar-hover-width) !important; 
+    max-width: var(--sidebar-hover-width) !important;
+    opacity: 0.6 !important;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABh0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjM2qefiJQAAABpJREFUGFdjCN/36aXO7Mv/xYIKbBhwAgYGAOksBp6YQZenAAAAAElFTkSuQmCC") !important;
+    background-color: transparent !important;
+    background-repeat: repeat-y !important;
+    background-attachment:fixed !important;
+    background-position: left !important;
+    border: 0px solid silver !important;
+}
+#sidebar-box:hover { 
+    margin-right: calc(var(--sidebar-visible-width) * -1) !important; 
+    left: var(--sidebar-visible-width) !important; 
+    min-width: var(--sidebar-visible-width) !important; 
+    max-width: var(--sidebar-visible-width) !important;
+    opacity: 1 !important;
+	border-right: 1px solid silver !important;
+	border-top: 0px solid silver !important;
+    border-bottom: 0px solid silver !important;
+    background-color: white !important;
+    background-position: right !important;
+}
+
+#sidebar-header{
+    visibility: collapse !important;
+    width: 100% !important;
+    font-weight: bold !important;
+}
+#sidebar{
+    visibility: collapse !important;
+    position:fixed !important;
+    width:100% !important;
+}
+#sidebar-box:hover > #sidebar,
+#sidebar-box:hover > #sidebar-header {visibility: visible !important;}
+#sidebar-splitter {display: none !important;}
+
+#sidebar-box,
+#sidebar-box > #sidebar,
+#sidebar-box > #sidebar-header {
+    transition-duration: 0.2s !important;
+    transition-delay:0.6s !important;
+}
+
+#sidebar-box:hover,
+#sidebar-box:hover > #sidebar,
+#sidebar-box:hover > #sidebar-header {
+    transition-duration: 0.2s !important;
+    transition-delay: 0.6s !important;
+}
+*/
+
+/*****非浮动侧边栏自动隐藏***
+:root { --sidebar-hover-width: 12px; --sidebar-visible-width: 100%;}
+#sidebar-box { 
+    position: relative !important; 
+	overflow-x: hidden !important;
+	opacity: 0 !important; 
+	margin: 0 -5px !important; 
+	min-width: var(--sidebar-hover-width) !important; 
+	max-width: var(--sidebar-hover-width) !important;
+	transition: 300ms !important; 
+	border: 0px #e4e4e4 solid !important;
+}
+#sidebar-box:hover { 
+    opacity: 1 !important;
+	margin: 0  !important; 
+	min-width: 308px !important; 
+	max-width: var(--sidebar-visible-width) !important;
+	border: 1px #e4e4e4 solid !important;
+	transition: 300ms !important; 
+}
+#sidebar { opacity: 1 !important;}
+*/
+
+/*侧边栏调整*/
+.sidebar-header, #sidebar-header {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding: 2px 4px!important;
+	background-color: #e4e4e4 !important;
+	width:100% !important;
+}
+#sidebar-search-container{
+   margin-left: 5px !important;
+   margin-right: 5px !important;
+}
+#bookmarks-view-children{
+  --treechildren-outline: none;
+  --treechildren-2ndBorderColor: transparent !important;
+  --treechildren-selectedColor: transparent !important;
+  --treechildren-focusColor: transparent !important;
+  --treechildren-selectedFocusColor: transparent !important;
+  --treechildren-currentColor: transparent !important;
+  --treechildren-hoverColor: transparent !important;
+  --treechildren-selectedBorder: transparent !important;
+  --treechildren-selectedBottomBorder: transparent !important;
+  --treechildren-selectedImage: none !important;
+  --treechildren-selectedBackground: transparent !important;
+  --treechildren-currentFocusBorder: transparent !important;
+  --treechildren-currentFocusBottomBorder: transparent !important;
+  --treechildren-selectedFocusBorder: transparent !important;
+  --treechildren-selectedFocusBottomBorder: transparent !important;
+  --treechildren-selectedFocusImage: none !important;
+  --treechildren-selectedFocusBackground: #D3D3D3 !important;
+  --treechildren-selectedFocusCurrentBorder: transparent !important;
+  --treechildren-selectedFocusCurrentBottomBorder: transparent !important;
+  --treechildren-selectedFocusCurrentImage: none !important;
+  --treechildren-hoverBorder: transparent !important;
+  --treechildren-hoverBottomBorder: transparent !important;
+  --treechildren-hoverImage: transparent !important;
+  --treechildren-hoverCurrentBorder: transparent !important;
+  --treechildren-hoverCurrentBottomBorder: transparent !important;
+  --treechildren-hoverCurrentImage: transparent !important;
+  --treechildren-hoverSelectedBorder: transparent !important;
+  --treechildren-hoverSelectedBottomBorder: transparent !important;
+  --treechildren-hoverSelectedImage: transparent !important;
+}
+#sidebar-switcher-target {
+ padding: 2px !important;
+ margin: 0 !important;
+}
+#sidebar-close, /* 隐藏关闭侧边栏按钮 */
+/*#sidebar-icon,*/
+#sidebar-header .dropmarker-icon,
+#sidebar-switcher-arrow {
+  display: none !important;
+}
+#sidebar-title{
+  min-width:30px !important;
+  padding: 0  2px !important;
+  margin: 0 !important;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+}
+/* 调整关闭侧边栏按钮位置 */
+#sidebar-checkbox {  
+  padding: 0 !important;
+  margin: 0 0 0 4px !important;
+  -moz-box-ordinal-group:10 !important;
+}
