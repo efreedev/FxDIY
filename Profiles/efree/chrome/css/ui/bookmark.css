@@ -79,12 +79,12 @@
 /*书签工具栏文件夹图标*/
 #PersonalToolbar toolbarbutton[class="bookmark-item"][type="menu"],
 menu[container="true"][class="menu-iconic bookmark-item"] {
-  list-style-image: url("../image/bookmark-toolbar-folder.svg") !important;
+  list-style-image: url("../../img/bookmark-toolbar-folder.svg") !important;
 }
 
 /*书签文件夹图标及网站图标自动补全*/
 menu.bookmark-item:not([query]):not([label="Bookmarks Toolbar"]) {
-  list-style-image: url("../image/bookmark-folder.svg") !important;
+  list-style-image: url("../../img/bookmark-folder.svg") !important;
 }
 
 /*自动隐藏文字标签
