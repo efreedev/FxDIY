@@ -1,6 +1,6 @@
 @-moz-document url-prefix(chrome: //mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
 
-/*附加组件栏边框色*/
+/*-附加组件栏边框色-*/
 #addon-bar {
 	border: 1px solid #e4e4e4 !important;
 }
@@ -11,15 +11,13 @@
 	background: rgb(225, 225, 225) !important;
 }
 
-/*显示计数*/
+/*-显示计数-*/
 #list-view #addon-list .addon[active="false"], #updates-view #addon-list .addon[active="false"] {
 	counter-increment: disabled;
 }
-
 #list-view #addon-list .addon[active="true"], #updates-view #addon-list .addon[active="true"] {
 	counter-increment: enabled;
 }
-
 #list-view #addon-list:after, #updates-view #addon-list:after {
 	content: "( "counter(enabled)" 启，"counter(disabled)" 禁 )" !important;
 	position: fixed !important;
@@ -36,25 +34,25 @@
 	width: 200px !important;
 }
 
-/*左侧分类列表*/
-/*隐藏"搜索""获取附加组件""外观""语言""服务"分类标签页*/
-/*#category-theme,
-#category-locale,
-#category-service.category, 
-#category-search,
-#category-userchromejs,*/
-#category-discover,
+/*===左侧分类列表===*/
+/*-隐藏特定的分类标签页-*/
+/*#category-theme,主题*/
+/*#category-locale,语言*/
+/*#category-service.category, 服务*/
+/*#category-search,搜索*/
+/*#category-userchromejs,UC脚本*/
+#category-discover,/*获取附加组件*/
 #legacy-extensions-notice > vbox:nth-child(1) {
 	display: none !important;
 }
 
-/*分类项样式*/
+/*-分类项样式-*/
 .category {
 	padding: 0 0 0 5px !important;
 	margin: 0 0 0 5px !important;
 }
 
-/*当前项样式*/
+/*-当前项样式-*/
 .category[selected="true"] {
 	border: 1px solid rgb(195, 206, 223) !important;
 	border-right: none !important;
@@ -62,12 +60,12 @@
 	border-radius: 5px 0 0 5px !important;
 }
 
-/*隐藏项样式*/
+/*-隐藏项样式-*/
 .category[hidden="true"], .category[disabled="true"] {
 	display: none !important;
 }
 
-/*分类名*/
+/*-分类名-*/
 .category-name {
 	padding: 0 6px !important;
 	font-size: 16px !important;
@@ -84,7 +82,7 @@
 	font-weight: bold !important;
 }
 
-/*数字背景颜色微调*/
+/*-数字背景颜色微调-*/
 .category-badge {
 	background-color: rgba(0, 0, 0, 0.25) !important;
 	padding: 2px 8px;
@@ -93,7 +91,7 @@
 	font-weight: normal !important;
 }
 
-/*分类图标定义*/
+/*-分类图标定义-*/
 .category-icon {
 	width: 36px !important;
 	height: 36px !important;
@@ -112,7 +110,7 @@
 }
 
 /*=== 右侧 #header ===*/
-/* 检查更新按钮和搜索框*/
+/*-检查更新按钮和搜索框-*/
 #header {
 	position: fixed !important;
 	margin: 0px !important;
@@ -123,7 +121,7 @@
 	border-bottom: 1px solid rgb(204, 204, 204) !important;
 }
 
-/* 检查更新按钮*/
+/*-检查更新按钮-*/
 #header-utils-btn {
 	background: none !important;
 	border: none !important;
@@ -136,7 +134,7 @@
 
 .toolbarbutton-menu-dropmarker {}
 
-/* 按钮/菜单列表 */
+/*===按钮/菜单列表===*/
 #addons-page #header button,
 #addons-page #header #header-utils-btn,
 #addons-page #list-view .global-info button,
@@ -185,7 +183,7 @@
 	font-size: 11px !important;
 }
 
-/*次顶栏*/
+/*-次顶栏-*/
 .view-header {
 	-moz-margin-end: 0px !important;
 	border-bottom: none !important;
@@ -196,7 +194,7 @@
 	height: 24px !important;
 }
 
-/* 隐藏元素*/
+/*-隐藏元素-*/
 #plugindeprecation-notice .alert,
 #getthemes-container .alert {
 	display: none !important;
@@ -247,7 +245,7 @@
 	border-radius: 0 !important;
 }
 
-/*列表顶部信息栏*/
+/*-列表顶部信息栏-*/
 .view-header, #update-actions {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -256,13 +254,13 @@
 	border-bottom: 1px solid rgb(204, 204, 204) !important;
 }
 
-/*列表顶部信息栏按钮*/
+/*-列表顶部信息栏按钮-*/
 .view-header .addon-control {
 	background: none !important;
 	border: none !important;
 }
 
-/*列表顶部信息栏排序按钮*/
+/*-列表顶部信息栏排序按钮-*/
 .view-header .sorter {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -283,7 +281,7 @@
 	background: rgb(242, 242, 242) !important;
 }
 
-/*文字修改*/
+/*-文字修改-*/
 .name-container {
 	font-weight: normal !important;
 	font-family: Microsoft YaHei !important;
@@ -295,7 +293,7 @@
 }
 
 /*========列表 .list========*/
-/*列表所有项目放到同一行*/
+/*-列表所有项目放到同一行-*/
 #view-port .addon.addon-view {
 	margin: 0 !important;
 	padding: 2px 12px !important;
@@ -328,20 +326,19 @@
 	margin-bottom: 8px !important;
 }
 
-.addon.addon-view .status-control-wrapper {
-	/*列表按钮*/
+.addon.addon-view .status-control-wrapper {/*列表按钮*/
 	position: absolute !important;
 	right: 12px;
 	top: 1px;
 }
 
-/*列表图标大小*/
+/*-列表图标大小-*/
 #view-port .icon-container, #view-port .icon {
 	height: 16px !important;
 	width: 16px !important;
 }
 
-/*列表各元素间距*/
+/*-列表各元素间距-*/
 #view-port .icon-container, #view-port .description {
 	margin-left: 0px !important;
 }
@@ -350,7 +347,7 @@
 	margin-left: 6px !important;
 }
 
-/*列表按钮全局*/
+/*-列表按钮全局-*/
 #view-port .list button, #view-port .list menulist, #view-port #detail-view button {
 	margin: 2px 0px !important;
 	margin-left: -1px !important;
@@ -364,39 +361,35 @@
 	cursor: pointer;
 }
 
-/*隐藏更多*/
+/*-隐藏更多-*/
 #list-view .details.button-link,
 #updates-view .details.button-link {
 	display: none !important;
 }
 
-/*隐藏描述信息*/
+/*-隐藏描述信息-*/
 .addon.addon-view .description-outer-container {
 	display: none !important;
 }
 
-/*显示描述信息*/
-.addon.addon-view[selected] .description-outer-container {
-	/*选中*/
+/*-显示描述信息-*/
+.addon.addon-view[selected] .description-outer-container {/*选中*/
 	display: -moz-box !important;
 }
 
-.addon.addon-view[pending] .pending {
-	/*禁用*/
+.addon.addon-view[pending] .pending {/*禁用*/
 	margin-left: 0 !important;
 }
 
-.addon.addon-view[selected][pending] .pending {
-	/*选中并禁用*/
+.addon.addon-view[selected][pending] .pending {/*选中并禁用*/
 	margin-left: -1px !important;
 }
 
-.addon.addon-view[pending] .description-outer-container {
-	/*禁用*/
+.addon.addon-view[pending] .description-outer-container {/*禁用*/
 	display: none !important;
 }
 
-/*行调整*/
+/*-行调整-*/
 #list-view > #addon-list .name-container,
 #updates-view > #updates-list .name-container {
 	width: 100% !important;
@@ -408,7 +401,7 @@
 }
 
 /*== 扩展、外观、插件等列表面板#list-view ==*/
-/*按钮样式*/
+/*-按钮样式-*/
 #list-view .control-container button,
 #list-view .addon-control.update,
 #updates-view .control-container button,
@@ -425,45 +418,44 @@
 #list-view .addon-control.update .button-text,
 #list-view .control-container .button-text,
 #updates-view .addon-control.update .button-text,
-#updates-view .control-container .button-text {
-	/*隐藏按钮文字*/
+#updates-view .control-container .button-text {/*隐藏按钮文字*/
 	visibility: hidden !important;
 	width: 0 !important;
 }
 
-/*立即更新按钮样式*/
+/*-立即更新按钮样式-*/
 #list-view .list button[class="addon-control update"], #updates-view .list button[class="addon-control update"] {
 	padding-left: 10px !important;
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAALVBMVEUAAABaWloaGhohISFiYmJra2tmZmbo6OhbW1soKCgFBQX29vbV1dWGhoZ5eXm5IH94AAAAAXRSTlMAQObYZgAAAD9JREFUCNdjAAL2AgYI4GiAMhgFiGYcBjFmAxmsBowCzAEgoWRGAVOwHIuhZAJEsdcSqC4WsAACPFICAl0EHwDPSwedmOyucAAAAABJRU5ErkJggg==") !important;
 }
 
-/*编辑按钮样式*/
+/*-编辑按钮样式-*/
 #list-view .list button[class="addon-control"], #updates-view .list button[class="addon-control"] {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVQ4jaWQPUpDQRRGv2/0YETEn1TB2sal6A7cgLvQUhAUJIWNltGNuJWgIGohKHGK2NwXXl7yng5eGJhvuOfcmZEKClgBrmznlNIYOCiFR7afgT5wklIaS9K0awH7Ad8HvB7Cge1vAdM/TK7gXpxt2n4BzjoFNfipBm8FfAO4VRDwwxL4FRgCrhoXBC3wdsDXM7hDcBvwWuQd22/AZSVrFQC7tjOwEbkf8EXkw+a0puBY0mfs92y/A+e1lvkbLxGMJH1J+rA9AU4bL+wWSMrAHXBU/UGp4Lea60+F8EL9W7Aq6bHwGZOc8yz8AOd4Q23I3IXNAAAAAElFTkSuQmCC") !important;
 
 }
 
-/*选项按钮样式*/
+/*-选项按钮样式-*/
 #list-view .list button[class="addon-control preferences"], #updates-view .list button[class="addon-control preferences"] {
 	margin-right: 0px !important;
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAAC3RSTlMAeKmcjVY6KRkHvah1F9gAAABPSURBVAjXY0AG0hvBFKvi9mqhACAjWjiBzXArkKEIEhYCYmFO7y0TDBkYGLexaHQ5ZAswcBdwN3BsYN8AZ4CkVoCkYIrh2uEGwq2AW4oAADmGFlmNN0uSAAAAAElFTkSuQmCC") !important;
 }
 
-/*启用按钮样式*/
+/*-启用按钮样式-*/
 #list-view .list button[class="addon-control enable"], #updates-view .list button[class="addon-control enable"] {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAQCAMAAABTCc2fAAAAmVBMVEUAAADS0tKQkJDl5eXR0dEaGhqsrKy+vr7l5eUAAADl5eXl5eXl5eXl5eW4uLjOzs6urq7Kysrl5eXl5eWenp7Kysq6urrl5eXl5eXl5eXl5eXl5eUXFxexsbG4uLhsbGzCwsL////m5ubq6ur9/f36+vr+/v7z8/Pc3Nzv7+/19fX39/fg4ODY2Njs7Ozl5eXW1tbMzMzGxsZVIz0EAAAAMXRSTlMA5CAg/wyS/oADrskV52LMR7X10S3rlIbZU5o6FL7cOPP////////////////////+qKW2EQAAAMVJREFUKM91klkSgjAQRMcNRMV9XyuEIQSIA97/cAJlKZHhfU5edfdHoGQ072UyyIwhyUDTE9R4/V4ialSQRqJN+pzOKrGff1+RUsGh/NL0Fo0UlCFvTgCWunmRSrDIC6ysA8qIFZMzGPsS8N2hD/GfiKwYEeT2hToSCXb2RuI34hH2iRWoBYs6wLZoNgyxo3kAnpP9JpuOZj2uvsTNhJ8huUE2T0+g4uq4scZUx8M4YSxUVObVjB7O3XXdV5FRm/VmPKikN4gyTq6p/4eMAAAAAElFTkSuQmCC") !important;
 	width: 40px !important;
 	min-width: 40px !important;
 }
 
-/*禁用按钮样式*/
+/*-禁用按钮样式-*/
 #list-view .list button[class="addon-control disable"], #updates-view .list button[class="addon-control disable"] {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAQCAMAAABTCc2fAAAAw1BMVEUAAAAAmEVTzIkAbTEA42cA42cA42cAIg8A42cjw2sAtVMA42cA42cA42cA42cA42cA42cA42cA42cA42cA42cA42cnxG5AzIBc1JJf1ZQPul0IslUAqEwRuF0ACwUAm0YAlEMAvlYA42f///8A4GUA02D6/vsCv1cIz2IA3GR126OE1am15sr+//7F7Nct0ngR0Wfn+e+i5sAA2GLu+vQwwnLR8+Be15W77dFC1IQ4w3Zr2p0AxloAx1ps1ZwnwGwPvF0YRe5hAAAAInRSTlMALP0oH68VB4CW1fXpzIXlxlTQmdk6ncvq8azDSO8WagcgR7pLuQAAALdJREFUKM+N0dcOgkAQQNERkGbvXRNWijSl2dv/f5VrsCyBMd7nk8nMLjwT5HZFy7eMrMPJHiolCdLkHEmdZceEZoRKKsuI2/jkVTCQfszT9+RTQGcKWnGrHWEKS1BHoL5lodGHLrYhyTQCDYHrLLT/hVeoItIyMpCDDnaMy7p4DD3seY4eA50p+jHa2fk6fyIBiA1kpOm8Z7ozHmhiE9nSTFx6kedzKg9prVqhjC6meUvu6mJOzQNIE1CzqGoQawAAAABJRU5ErkJggg==") !important;
 	width: 40px !important;
 	min-width: 40px !important;
 }
 
-/*移除按钮样式*/
+/*-移除按钮样式-*/
 #list-view .list button[class="addon-control remove"], #updates-view .list button[class="addon-control remove"] {
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEUAAAAeHh4eHh4eHh4eHh47LjzyAAAABHRSTlMA4cQ8m0qywAAAADlJREFUCNdjYGBQcXFxUWAAAmcGBmYHBgZGFzBwZGBgAQoCCewMAQEBCMPBwYFIBkIXpoFMIDudGADExglFWgGWnAAAAABJRU5ErkJggg==") !important;
 	min-width: 22px !important;
@@ -477,19 +469,19 @@
 
 #list-view button[class="addon-control remove"]:active:hover, #updates-view button[class="addon-control remove"]:active:hover {}
 
-/*总是激活|总是禁用按钮样式*/
+/*-总是激活|总是禁用按钮样式-*/
 #list-view .addon-control.state {}
 
-/*== 详细面板#detail-view ==*/
-/*详细面板按钮样式*/
+/*=== 详细面板#detail-view ===*/
+/*-详细面板按钮样式-*/
 #detail-view #detail-controls button {}
 
-/*== 更新面板#updates-view ==*/
+/*=== 更新面板#updates-view ===*/
 #updates-view {
 	margin-top: 6px !important;
 }
 
-/*安装选中的更新&立即更新*/
+/*-安装选中的更新&立即更新-*/
 #updates-view #update-selected-btn {
 	background: none !important;
 	color: rgb(66, 66, 66) !important;
@@ -498,17 +490,17 @@
 	border: 1px solid rgb(204, 204, 204) !important;
 }
 
-/*隐藏兼容检查警告*/
+/*-隐藏兼容检查警告-*/
 .view-header.global-warning-container, .global-warning-container.global-warning, .addon.addon-view .warning {
 	display: none !important;
 }
 
-/*隐藏作者*/
+/*-隐藏作者-*/
 #search-list .creator, #addon-list .creator, #updates-list .creator {
 	display: none !important;
 }
 
-/*进度条*/
+/*-进度条-*/
 .download-progress {
 	background-image: none !important;
 }
@@ -529,17 +521,17 @@ progressmeter {
 	box-shadow: 0 0 4px -1px #49F;
 }
 
-/*隐藏底部信息*/
+/*-隐藏底部信息-*/
 #userstyle-footer {
 	display: none !important;
 }
 
-/*隐藏水平滚动条*/
+/*-隐藏水平滚动条-*/
 #view-port-container #view-port scrollbox {
 	overflow-x: hidden !important
 }
 
-/* 显示ID*/
+/*-显示ID-*/
 .addon[selected="true"]::after {
 	content: " ID : "attr(value) !important;
 	margin-left: 20px !important;
@@ -548,7 +540,7 @@ progressmeter {
 	cursor: default;
 }
 
-/*当前选择项显示描述信息*/
+/*-当前选择项显示描述信息-*/
 .addon.addon-view[selected="true"] .description-container {
 	display: -moz-box !important;
 	position: absolute !important;
@@ -567,12 +559,12 @@ progressmeter {
 	display: none !important;
 }
 
-/*启用项粗体*/
+/*-启用项粗体-*/
 #addons-page .addon[active="true"] .name-container {
 	color: #003366 !important;
 }
 
-/*禁用项背景*/
+/*-禁用项背景-*/
 #addons-page .main-content .addon[active="false"] {
 	opacity: .8 !important;
 }
@@ -581,38 +573,37 @@ progressmeter {
 	opacity: .5 !important;
 }
 
-/* 选中项背景 */
+/*-选中项背景-*/
 #search-list .addon[selected],
 #addon-list .addon[selected],
 #updates-list .addon[selected] {
 	background-color: #C9EDFF !important;
 }
 
-/* 隐藏元素*/
+/*-隐藏元素-*/
 #updates-container {
 	display: none !important;
 }
 
-/*隐藏附加组件管理器里的"显示发行说明"选项*/
+/*-隐藏附加组件管理器里的"显示发行说明"选项-*/
 .relnotes-toggle {
 	opacity: 0 !important;
 }
 
-/*隐藏拓展版本信息*/
+/*-隐藏拓展版本信息-*/
 .name-container .version {
 	display: none !important;
 }
 
-/*修复Firefox40+出现的问题*/
+/*-修复Firefox40+出现的问题-*/
 .main-content {
 	border: none !important;
 }
-
 #list-view {
 	padding-top: 35px !important;
 }
 
-/*修正附加组件左侧动画方框距离*/
+/*-修正附加组件左侧动画方框距离-*/
 @-moz-document url("about:addons") {
 	.category {
 		background: transparent !important;
@@ -621,7 +612,7 @@ progressmeter {
 		margin-left: 0px !important;
 	}
 
-	/*附加组件图标自定义*/
+	/*-附加组件图标自定义-*/
 	#category-discover > .category-icon {
 		list-style-image: url("../../image/category-discover.png") !important;
 	}

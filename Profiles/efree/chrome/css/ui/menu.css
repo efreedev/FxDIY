@@ -25,10 +25,8 @@ menu[label="Flagfox"],
 #context-savepage,
 #context-selectall,
 #context-viewpartialsource-selection,
-#context-sep-viewbgimage,
-/*查看背景图形分割线*/
-#context-sep-viewsource,
-/*查看页面源代码分割线*/
+#context-sep-viewbgimage,/*查看背景图形分割线*/
+#context-sep-viewsource,/*查看页面源代码分割线*/
 /*#inspect-separator, 查看元素分割线*/
 #screenshots_mozilla_org-menuitem-_create-screenshot,
 #screenshots_mozilla_org_create-screenshot,
@@ -68,23 +66,17 @@ menu[label="Flagfox"],
 
 /*输入框右键*/
 #spell-separator,
-#spell-add-dictionaries-main,
-/*新增字典*/
+#spell-add-dictionaries-main,/*新增字典*/
 #context-sep-paste,
-#spell-dictionaries,
-/*语言-添加字典*/
-#context-keywordfield {
-  /*为此搜索添加关键字*/
+#spell-dictionaries,/*语言-添加字典*/
+#context-keywordfield { /*为此搜索添加关键字*/
   display: none;
 }
 
 /*图像右键菜单*/
-#context-sep-copyimage,
-/*复制图片下面的分割线*/
-#context-sendimage,
-/*发送图片到*/
-#context-setDesktopBackground,
-/*设置为桌面背景*/
+#context-sep-copyimage,/*复制图片下面的分割线*/
+#context-sendimage,/*发送图片到*/
+#context-setDesktopBackground,/*设置为桌面背景*/
 #context-viewimageinfo {
   display: none;
 }
@@ -99,8 +91,7 @@ menu[label="Flagfox"],
 
 /*标签右键菜单*/
 #mafMenuSaveTabsInArchive_tabsContextMenu,
-#tabContextMenu>menuseparator:nth-child(6),
-/*分割线1*/
+#tabContextMenu>menuseparator:nth-child(6),/*分割线1*/
 /*#tabContextMenu > menuseparator:nth-child(10),分割线2*/
 #tabContextMenu>menuseparator:nth-child(16),/*分割线3*/
 /*#context_pinTab, #context_unpinTab,*/
@@ -128,28 +119,21 @@ menu[label="Flagfox"],
 #BMB_subscribeToPageMenuitem,
 #BMB_subscribeToPageMenupopup,
 #BMB_subscribeToPageMenupopup+menuseparator,
-#BMB_bookmarksShowAllTop,
-/* 管理所有书签（菜单上方） */
+#BMB_bookmarksShowAllTop,/* 管理所有书签（菜单上方） */
 #BMB_bookmarksShowAllTop+menuseparator,
 #BMB_pocket,
 #BMB_pocket+menuseparator,
-menu.subviewbutton:nth-child(9),
-/*最常访问的书签*/
-#BMB_viewBookmarksSidebar,
-/* 显示书签侧栏 */
-#BMB_bookmarksToolbar,
-/* 书签工具栏  */
-#BMB_unsortedBookmarks,
-/* 其他书签 */
+menu.subviewbutton:nth-child(9),/*最常访问的书签*/
+#BMB_viewBookmarksSidebar,/* 显示书签侧栏 */
+#BMB_bookmarksToolbar,/* 书签工具栏  */
+#BMB_unsortedBookmarks,/* 其他书签 */
 #BMB_unsortedBookmarks+menuseparator,
-#BMB_mobileBookmarks,
-/* 移动版书签 */
-/*#BMB_bookmarksShowAll, */
-/* 管理所有书签（菜单最下方）*/
+#BMB_mobileBookmarks,/* 移动版书签 */
+/*#BMB_bookmarksShowAll, 管理所有书签（菜单最下方）*/
 #BMB_bookmarksPopup>menuseparator:first-of-type,
 #BMB_bookmarksPopup>menuseparator:nth-of-type(2),
-.menu-iconic.bookmark-item.subviewbutton[label="最近使用的书签"],
 /*隐藏书签按钮最近使用的书签和标签*/
+.menu-iconic.bookmark-item.subviewbutton[label="最近使用的书签"],
 .menu-iconic.bookmark-item.subviewbutton[label="最近使用的标签"] {
   display: none !important
 }
@@ -193,7 +177,7 @@ menu.subviewbutton:nth-child(9),
   display: none !important;
 }
 
-/* =====菜单调整===== */
+/*=====菜单调整=====*/
 /*粘贴并前往置顶*/
 .textbox-contextmenu menuitem:not([anonid="paste-and-go"]),
 .textbox-contextmenu menuseparator {
@@ -204,7 +188,7 @@ menuitem[anonid="paste-and-go"] {
   -moz-box-ordinal-group: 1 !important;
 }
 
-/* =====菜单美化===== */
+/*=====菜单美化=====*/
 /*菜单选中区域样式*/
 menupopup>menu[_moz-menuactive="true"],
 menupopup>menuitem[_moz-menuactive="true"],
@@ -250,7 +234,7 @@ menupopup:not([id^="BMB"]):not([placespopup="true"]) {
   background: -moz-linear-gradient(rgb(249, 248, 248), rgb(249, 248, 248)) !important;
   background-clip: content-box !important;
   border-width: 32px 56px 58px !important;
-  border-image: url(../../img/shadow.png) 32 56 58 !important;
+  border-image: url("../../img/shadow.png") 32 56 58 !important;
   margin: -30px -55px -78px !important;
   border-width: 5px 10px 15px !important;
   margin: -5px -10px -15px !important;
@@ -263,12 +247,10 @@ menupopup:not([id^="BMB"]):not([placespopup="true"]) {
 
 /*=====配合自定义菜单脚本(addMenuPlus.uc.js)=====*/
 /*页面右键菜单*/
-#context-viewbgimage,
-/*查看背景图*/
+#context-viewbgimage,/*查看背景图*/
 #context-viewsource,
 #context-viewinfo,
-#inspect-separator,
-/*分隔线*/
+#inspect-separator,/*分隔线*/
 /*#xxxx + menuseparator,/*xxxx后面的分隔线*/
 #context-inspect
 
